@@ -61,7 +61,12 @@ export const Home = () => {
         </motion.div>
       </section>
       <section>
-        <a href={`files/resume.pdf`} target="_blank" className="flex justify-center" rel="noreferrer">
+        <a
+          href={`files/resume.pdf`}
+          target="_blank"
+          className="flex justify-center"
+          rel="noreferrer"
+        >
           <motion.div
             initial={resume.initial}
             animate={resume.animated}
