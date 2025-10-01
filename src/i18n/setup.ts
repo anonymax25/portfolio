@@ -16,7 +16,6 @@ import RelativeTimePlugin from 'dayjs/plugin/relativeTime.js';
 import timezone from 'dayjs/plugin/timezone.js';
 import UtcPlugin from 'dayjs/plugin/utc.js';
 
-
 dayjs.extend(LocalizedFormatPlugin);
 dayjs.extend(LocaleDataPlugin);
 dayjs.extend(timezone);
@@ -28,7 +27,6 @@ dayjs.extend(IsBetweenPlugin);
 dayjs.extend(IsSameOrAfterPlugin);
 dayjs.extend(IsSameOrBeforePlugin);
 dayjs.extend(DayOfYearPlugin);
-
 
 export * from 'react-i18next';
 
@@ -56,7 +54,6 @@ export function init({
   supportedLngs = ['en-US', 'fr-FR'],
   enableMultilingual = true,
 }: { supportedLngs?: Array<string>; enableMultilingual?: boolean } = {}) {
-
   if (enableMultilingual) {
     instance.use(LanguageDetector);
     instance.on('languageChanged', (lng: string) => {
@@ -80,7 +77,8 @@ export function init({
     fallbackNS: false,
     preload: [supportedLngs[0]],
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['querystring', 'localStorage', 'navigator'],
+      lookupQuerystring: 'lang',
     },
     backend: {
       loadPath: `locales/{{lng}}.json`,

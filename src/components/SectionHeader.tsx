@@ -4,11 +4,7 @@ interface SectionHeaderProps {
   description: string;
 }
 
-export const SectionHeader = ({
-  icon,
-  label,
-  description,
-}: SectionHeaderProps) => {
+export const SectionHeader = ({ icon, label, description }: SectionHeaderProps) => {
   return (
     <div className="flex flex-col mb-6">
       <div className="flex items-center space-x-2">

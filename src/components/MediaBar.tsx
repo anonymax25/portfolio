@@ -11,19 +11,19 @@ import {
 
 export const MediaBar = () => {
   const media = [
-    { icon: <IconBrandGithub />, link: 'https://github.com/Bayusetiawan45' },
+    { icon: <IconBrandGithub />, link: 'https://github.com/anonymax25' },
     {
       icon: <IconBrandLinkedin />,
-      link: 'https://www.linkedin.com/in/bayu-setiawan99/',
+      link: 'https://www.linkedin.com/in/maxime-dharboulle/',
     },
     {
       icon: <IconBrandInstagram />,
-      link: 'https://www.instagram.com/bayustr__/',
+      link: 'https://www.instagram.com/anonymax.25/',
     },
-    { icon: <IconBrandWhatsapp />, link: 'https://wa.me/+62887676546' },
+    { icon: <IconBrandWhatsapp />, link: 'https://wa.me/+61420257570' },
     {
       icon: <IconBrandCampaignmonitor />,
-      link: 'mailto:bayusetiawanipb@gmail.com',
+      link: 'mailto:maxime.dharboulle@gmail.com',
     },
   ];
   const { container } = MediaBarMotion;

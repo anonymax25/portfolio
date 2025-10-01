@@ -18,7 +18,7 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
   const changeLanguage = (lng: DefaultSupportedLngs) => {
     i18n.changeLanguage(lng);
   };
-  
+
   return (
     <motion.nav
       initial={container.initial}
@@ -30,10 +30,12 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
         <Link to="/" className="text-white hover:text-teal-500">
           {t('common.name')}
         </Link>
-        <IconLanguage onClick={() => {
-          changeLanguage(i18n.language === 'en-US' ? 'fr-FR' : 'en-US');
-          onClick();
-          }} />
+        <IconLanguage
+          onClick={() => {
+            changeLanguage(i18n.language === 'en-US' ? 'fr-FR' : 'en-US');
+            onClick();
+          }}
+        />
         <IconX onClick={onClick} />
       </div>
       <div className="flex flex-col space-y-2 text-center">

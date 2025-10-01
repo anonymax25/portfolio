@@ -27,11 +27,7 @@ export const Education = () => {
       transition={section.transition}
       className="space-y-6"
     >
-      <SectionHeader
-        icon={<IconBallpen />}
-        label="Education"
-        description={sectionDescription}
-      />
+      <SectionHeader icon={<IconBallpen />} label="Education" description={sectionDescription} />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {educations.map((education) => (
           <CommonCard key={education.id} {...education} />

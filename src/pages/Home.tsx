@@ -27,12 +27,8 @@ export const Home = () => {
             {t('home.engineer')}
           </h2>
         </div>
-        <p className="text-center md:text-start text-xs md:text-base">
-          {t('home.intro')}
-        </p>
-        <p className="text-center md:text-start text-xs md:text-base">
-          {t('home.objectives')}
-        </p>
+        <p className="text-center md:text-start text-xs md:text-base">{t('home.intro')}</p>
+        <p className="text-center md:text-start text-xs md:text-base">{t('home.objectives')}</p>
         <Link to="resume.pdf" target="_blank">
           <motion.div
             initial={resume.initial}

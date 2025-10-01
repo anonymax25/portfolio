@@ -7,6 +7,7 @@ import { ProjectCard } from '../components/ProjectCard';
 export const Portfolio = () => {
   const { section } = SectionMotion;
   const sectionDescription = 'List of my portfolio projects';
+
   const portfolios = [
     {
       id: 1,

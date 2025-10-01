@@ -30,7 +30,7 @@ export const Skills = () => {
     { type: 'frontend', label: 'Angular', icon: <IconBrandAngular /> },
     { type: 'backend', label: 'Node.Js', icon: <IconBrandTypescript /> },
     { type: 'backend', label: '.Net', icon: <IconBrandCSharp /> },
-    { type: 'backend', label: 'python', icon: <IconBrandPython/> },
+    { type: 'backend', label: 'python', icon: <IconBrandPython /> },
     { type: 'infrastructure', label: 'Kubernetes', icon: <IconCloudComputing /> },
     { type: 'infrastructure', label: 'AWS', icon: <IconBrandAws /> },
     { type: 'infrastructure', label: 'Monitoring', icon: <IconSunglasses /> },
@@ -54,21 +54,27 @@ export const Skills = () => {
       />
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
         Frontend
-        {skills.filter(s => s.type === 'frontend').map((skill) => (
-          <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
-        ))}
+        {skills
+          .filter((s) => s.type === 'frontend')
+          .map((skill) => (
+            <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
+          ))}
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
         Backend
-        {skills.filter(s => s.type === 'backend').map((skill) => (
-          <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
-        ))}
+        {skills
+          .filter((s) => s.type === 'backend')
+          .map((skill) => (
+            <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
+          ))}
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
         Infrastructure
-        {skills.filter(s => s.type === 'infrastructure').map((skill) => (
-          <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
-        ))}
+        {skills
+          .filter((s) => s.type === 'infrastructure')
+          .map((skill) => (
+            <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
+          ))}
       </div>
     </motion.section>
   );

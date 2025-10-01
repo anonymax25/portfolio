@@ -1,4 +1,4 @@
-import { useTranslation } from "../i18n";
+import { useTranslation } from '../i18n';
 
 export const Footer = () => {
   const { t } = useTranslation();

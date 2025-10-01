@@ -49,7 +49,7 @@ export const Contact = () => {
       id: 5,
       name: 'Linkedin',
       image: <IconBrandLinkedin style={iconStyles} />,
-      description: 'Maxime d\'Harboullé',
+      description: "Maxime d'Harboullé",
       link: 'https://www.linkedin.com/in/maxime-dharboulle/',
     },
   ];

@@ -29,8 +29,8 @@ export const ProjectCard = (props: ProjectCardProps) => {
         <div className="flex flex-col justify-start p-4 text-gray-400 text-sm">
           <h2 className="text-lg font-bold text-white">{name}</h2>
           <p className="text-gray-400 text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            tempore eius provident? Inventore, quas repudiandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore eius provident?
+            Inventore, quas repudiandae.
           </p>
         </div>
       </motion.div>

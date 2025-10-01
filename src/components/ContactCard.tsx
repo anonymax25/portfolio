@@ -11,7 +11,7 @@ interface ContactCardProps {
 
 export const ContactCard = (props: ContactCardProps) => {
   const { image, name, description, link } = props;
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <motion.div className="flex items-center space-x-4 w-full md:w-max min-w-[300px] p-4 rounded-xl bg-gray-900">
       <div className="w-20 h-20">{image}</div>

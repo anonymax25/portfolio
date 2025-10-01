@@ -11,8 +11,7 @@ interface CommonCardProps {
 }
 
 export const CommonCard = (props: CommonCardProps) => {
-  const { image, name, position, startDate, endDate, duration, location } =
-    props;
+  const { image, name, position, startDate, endDate, duration, location } = props;
   return (
     <motion.div
       initial={{

@@ -29,7 +29,6 @@ export const Header = () => {
           transition={{ delay: 0.1 }}
           className="flex items-center space-x-2 font-bold text-md md:text-3xl text-teal-400"
         >
-          {/* <IconRobot width={35} height={35} /> */}
           <span>{t('common.name')}</span>
         </motion.div>
       </Link>
@@ -40,22 +39,17 @@ export const Header = () => {
         className="hidden lg:flex space-x-10"
       >
         {navLink.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className="text-white font-bold hover:text-teal-400"
-          >
+          <Link key={item.path} to={item.path} className="text-white font-bold hover:text-teal-400">
             {t(`header.${item.name}`)}
           </Link>
         ))}
-         <IconLanguage onClick={() => {
+        <IconLanguage
+          onClick={() => {
             changeLanguage(i18n.language === 'en-US' ? 'fr-FR' : 'en-US');
-          }} />
+          }}
+        />
       </motion.nav>
-      <IconMenu2
-        onClick={toggleDrawer}
-        className="cursor-pointer flex lg:hidden"
-      />
+      <IconMenu2 onClick={toggleDrawer} className="cursor-pointer flex lg:hidden" />
       {openDrawer && <Drawer onClick={toggleDrawer} links={navLink} />}
     </motion.header>
   );
