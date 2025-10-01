@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../i18n';
 interface ContactCardProps {
   id: number;
   image: React.ReactNode;
@@ -10,6 +11,7 @@ interface ContactCardProps {
 
 export const ContactCard = (props: ContactCardProps) => {
   const { image, name, description, link } = props;
+  const { t } = useTranslation()
   return (
     <motion.div className="flex items-center space-x-4 w-full md:w-max min-w-[300px] p-4 rounded-xl bg-gray-900">
       <div className="w-20 h-20">{image}</div>
@@ -23,7 +25,7 @@ export const ContactCard = (props: ContactCardProps) => {
           target="_blank"
           className="text-teal-600 hover:text-white hover:bg-teal-600 rounded-md p-1"
         >
-          Send a message
+          {t('contact.send')}
         </Link>
       </div>
     </motion.div>

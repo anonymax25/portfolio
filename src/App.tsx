@@ -11,6 +11,10 @@ import { MediaBar } from './components/MediaBar';
 import { Footer } from './components/Footer';
 import { NotFound } from './pages/NotFound';
 
+import { init } from './i18n/setup';
+init();
+import './i18n';
+
 function App() {
   return (
     <main className="w-screen py-4 bg-gray-950 text-gray-50 min-h-screen">

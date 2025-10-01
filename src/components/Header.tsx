@@ -1,19 +1,21 @@
-import { IconMenu2, IconRobot } from '@tabler/icons-react';
+import { IconLanguage, IconMenu2, IconRobot } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Drawer } from './Drawer';
 import { INavLink } from '../types/common';
+import { useTranslation } from '../i18n';
+import { changeLanguage } from 'i18next';
 
 export const Header = () => {
+  const { t, i18n } = useTranslation();
   const [openDrawer, setOpenDrawer] = useState(false);
   const navLink: INavLink[] = [
-    { name: 'About', path: '/about' },
-    { name: 'Skills', path: '/skills' },
-    { name: 'Experience', path: '/experience' },
-    { name: 'Education', path: '/education' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'skills', path: '/skills' },
+    { name: 'experience', path: '/experience' },
+    { name: 'education', path: '/education' },
+    { name: 'portfolio', path: '/portfolio' },
+    { name: 'contact', path: '/contact' },
   ];
   function toggleDrawer() {
     setOpenDrawer(!openDrawer);
@@ -28,7 +30,7 @@ export const Header = () => {
           className="flex items-center space-x-2 font-bold text-md md:text-3xl text-teal-400"
         >
           <IconRobot width={35} height={35} />
-          <span>Bayu Setiawan</span>
+          <span>{t('common.name')}</span>
         </motion.div>
       </Link>
       <motion.nav
@@ -43,9 +45,12 @@ export const Header = () => {
             to={item.path}
             className="text-white font-bold hover:text-teal-400"
           >
-            {item.name}
+            {t(`header.${item.name}`)}
           </Link>
         ))}
+         <IconLanguage onClick={() => {
+            changeLanguage(i18n.language === 'en-US' ? 'fr-FR' : 'en-US');
+          }} />
       </motion.nav>
       <IconMenu2
         onClick={toggleDrawer}

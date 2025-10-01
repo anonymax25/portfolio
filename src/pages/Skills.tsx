@@ -2,27 +2,41 @@ import { motion } from 'framer-motion';
 import {
   IconCodeCircle,
   IconBrandReact,
-  IconBrandNextjs,
   IconBrandVue,
-  IconBrandNuxt,
-  IconBrandSvelte,
-  IconBrandTailwind,
+  IconBrandAngular,
+  IconBrandAws,
+  IconBrandAnsible,
+  IconCloudComputing,
+  IconDatabase,
+  IconBrandTypescript,
+  IconBrandCSharp,
+  IconBrandPython,
+  IconDevicesPc,
+  IconLink,
+  IconLock,
 } from '@tabler/icons-react';
 import { SectionMotion } from '../common/motion/Section';
 import { SectionHeader } from '../components/SectionHeader';
 import { SkillCard } from '../components/SkillCard';
+import { useTranslation } from '../i18n';
 
 export const Skills = () => {
   const { section } = SectionMotion;
-  const sectionDescription = 'List of my skills';
-  // mockup skills data
+  const { t } = useTranslation();
   const skills = [
-    { label: 'React Js', icon: <IconBrandReact /> },
-    { label: 'Next Js', icon: <IconBrandNextjs /> },
-    { label: 'Vue Js', icon: <IconBrandVue /> },
-    { label: 'Nuxt Js', icon: <IconBrandNuxt /> },
-    { label: 'Svelte Js', icon: <IconBrandSvelte /> },
-    { label: 'Tailwind CSS', icon: <IconBrandTailwind /> },
+    { type: 'frontend', label: 'React Js', icon: <IconBrandReact /> },
+    { type: 'frontend', label: 'Vue Js', icon: <IconBrandVue /> },
+    { type: 'frontend', label: 'Angular', icon: <IconBrandAngular /> },
+    { type: 'backend', label: 'Node.Js', icon: <IconBrandTypescript /> },
+    { type: 'backend', label: '.Net', icon: <IconBrandCSharp /> },
+    { type: 'backend', label: 'python', icon: <IconBrandPython/> },
+    { type: 'infrastructure', label: 'Kubernetes', icon: <IconCloudComputing /> },
+    { type: 'infrastructure', label: 'Ansible', icon: <IconBrandAnsible /> },
+    { type: 'infrastructure', label: 'AWS', icon: <IconBrandAws /> },
+    { type: 'infrastructure', label: 'Hosting', icon: <IconDevicesPc /> },
+    { type: 'infrastructure', label: 'Database Admin', icon: <IconDatabase /> },
+    { type: 'infrastructure', label: 'Domaine management', icon: <IconLink /> },
+    { type: 'infrastructure', label: 'Certificates', icon: <IconLock /> },
   ];
   return (
     <motion.section
@@ -33,11 +47,24 @@ export const Skills = () => {
     >
       <SectionHeader
         icon={<IconCodeCircle />}
-        label="Skills"
-        description={sectionDescription}
+        label={t('skills.title')}
+        description={t('skills.description')}
       />
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2">
-        {skills.map((skill) => (
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+        Frontend
+        {skills.filter(s => s.type === 'frontend').map((skill) => (
+          <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
+        ))}
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+        Backend
+        {skills.filter(s => s.type === 'backend').map((skill) => (
+          <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
+        ))}
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+        Infrastructure
+        {skills.filter(s => s.type === 'infrastructure').map((skill) => (
           <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
         ))}
       </div>

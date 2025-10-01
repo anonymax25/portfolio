@@ -29,12 +29,12 @@ export const HomeMotion = {
   },
   wrapImg: {
     initial: {
-      borderEndEndRadius: '100px',
-      borderStartStartRadius: '100px',
+      borderEndEndRadius: '50px',
+      borderStartStartRadius: '50px',
     },
     animated: {
-      borderEndEndRadius: '500px',
-      borderStartStartRadius: '500px',
+      borderEndEndRadius: '200px',
+      borderStartStartRadius: '200px',
     },
     transition: {
       delay: 0.3,

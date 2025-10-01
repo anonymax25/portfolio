@@ -1,0 +1,56 @@
+name: release
+
+on:
+    workflow_dispatch:
+    pull_request:
+        branches:
+            - develop
+    push:
+        branches:
+            - develop
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+    release:
+        name: Release
+        timeout-minutes: 30
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+                  ref: ${{ github.head_ref || github.ref }}
+
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 22.18.0
+
+            - name: Checks
+              env:
+                LOCAL_BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+              run: |
+                  echo "Node: $(node -v)"
+                  echo "Yarn: $(yarn -v)"
+                  echo "Branch: $(git branch)"
+                  echo "Status: $(git status)"
+                  echo "LOCAL_BRANCH_NAME: $LOCAL_BRANCH_NAME"
+
+            - name: Install dependencies
+              run: yarn --immutable
+
+            - name: Lint
+              run: yarn lint
+
+            - name: Build
+              run: |
+                  yarn build
+
+            - name: Upload Pages artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                path: dist
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
