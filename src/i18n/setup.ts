@@ -56,11 +56,6 @@ export function init({
   supportedLngs = ['en-US', 'fr-FR'],
   enableMultilingual = true,
 }: { supportedLngs?: Array<string>; enableMultilingual?: boolean } = {}) {
-  // Teamcity specifics to avoid locales errors in Storybook
-  let pathname = '{{ns}}';
-  if (window.location.host.includes('localhost')) {
-    pathname = '';
-  }
 
   if (enableMultilingual) {
     instance.use(LanguageDetector);
@@ -88,7 +83,7 @@ export function init({
       order: ['localStorage', 'navigator'],
     },
     backend: {
-      loadPath: `${pathname}/locales/{{lng}}.json`,
+      loadPath: `locales/{{lng}}.json`,
     },
     react: {
       useSuspense: false,
