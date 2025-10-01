@@ -57,9 +57,9 @@ export function init({
   enableMultilingual = true,
 }: { supportedLngs?: Array<string>; enableMultilingual?: boolean } = {}) {
   // Teamcity specifics to avoid locales errors in Storybook
-  let pathname = '';
-  if (window.location.host === 'teamcity.evs.tv' && window.location.pathname.includes('storybook.zip')) {
-    pathname = window.location.pathname.replace(/\/(index|iframe)\.html$/, '');
+  let pathname = '{{ns}}';
+  if (window.location.host.includes('localhost')) {
+    pathname = '';
   }
 
   if (enableMultilingual) {
