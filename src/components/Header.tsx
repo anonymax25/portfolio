@@ -1,4 +1,4 @@
-import { IconLanguage, IconMenu2, IconRobot } from '@tabler/icons-react';
+import { IconLanguage, IconMenu2 } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -29,7 +29,7 @@ export const Header = () => {
           transition={{ delay: 0.1 }}
           className="flex items-center space-x-2 font-bold text-md md:text-3xl text-teal-400"
         >
-          <IconRobot width={35} height={35} />
+          {/* <IconRobot width={35} height={35} /> */}
           <span>{t('common.name')}</span>
         </motion.div>
       </Link>

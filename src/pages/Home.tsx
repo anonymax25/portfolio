@@ -33,7 +33,7 @@ export const Home = () => {
         <p className="text-center md:text-start text-xs md:text-base">
           {t('home.objectives')}
         </p>
-        <Link to="./resume.pdf" target="_blank">
+        <Link to="resume.pdf" target="_blank">
           <motion.div
             initial={resume.initial}
             animate={resume.animated}
@@ -55,7 +55,7 @@ export const Home = () => {
           initial={image.initial}
           animate={image.animated}
           transition={image.transition}
-          src="/me.jpeg"
+          src="me.jpeg"
           alt="profile"
           width="100%"
           height="100%"
