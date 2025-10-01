@@ -14,6 +14,7 @@ import {
   IconDevicesPc,
   IconLink,
   IconLock,
+  IconSunglasses,
 } from '@tabler/icons-react';
 import { SectionMotion } from '../common/motion/Section';
 import { SectionHeader } from '../components/SectionHeader';
@@ -31,8 +32,9 @@ export const Skills = () => {
     { type: 'backend', label: '.Net', icon: <IconBrandCSharp /> },
     { type: 'backend', label: 'python', icon: <IconBrandPython/> },
     { type: 'infrastructure', label: 'Kubernetes', icon: <IconCloudComputing /> },
-    { type: 'infrastructure', label: 'Ansible', icon: <IconBrandAnsible /> },
     { type: 'infrastructure', label: 'AWS', icon: <IconBrandAws /> },
+    { type: 'infrastructure', label: 'Monitoring', icon: <IconSunglasses /> },
+    { type: 'infrastructure', label: 'Ansible', icon: <IconBrandAnsible /> },
     { type: 'infrastructure', label: 'Hosting', icon: <IconDevicesPc /> },
     { type: 'infrastructure', label: 'Database Admin', icon: <IconDatabase /> },
     { type: 'infrastructure', label: 'Domaine management', icon: <IconLink /> },
