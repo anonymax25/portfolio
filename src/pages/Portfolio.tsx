@@ -2,42 +2,28 @@ import { motion } from 'framer-motion';
 import { IconBrandCodepen } from '@tabler/icons-react';
 import { SectionMotion } from '../common/motion/Section';
 import { SectionHeader } from '../components/SectionHeader';
-import { ProjectCard } from '../components/ProjectCard';
+import { ProjectCard, ProjectCardProps } from '../components/ProjectCard';
+import { useTranslation } from '../i18n';
 
 export const Portfolio = () => {
   const { section } = SectionMotion;
-  const sectionDescription = 'List of my portfolio projects';
+  const { t } = useTranslation();
 
-  const portfolios = [
+  const portfolios: ProjectCardProps[] = [
     {
-      id: 1,
-      name: 'Portfolio Project',
-      image: '/portfolio.webp',
-      link: 'https://codebayu.com',
+      name: 'Mizipet / Mizipet Pro',
+      src: 'https://pro.mizipet.com',
+      type: 'url',
     },
     {
-      id: 2,
-      name: 'Portfolio Project',
-      image: '/portfolio.webp',
-      link: 'https://codebayu.com',
+      name: 'Grafana Monitoring Stack',
+      src: 'images/grafana.png',
+      type: 'img',
     },
     {
-      id: 12,
-      name: 'Portfolio Project',
-      image: '/portfolio.webp',
-      link: 'https://codebayu.com',
-    },
-    {
-      id: 13,
-      name: 'Portfolio Project',
-      image: '/portfolio.webp',
-      link: 'https://codebayu.com',
-    },
-    {
-      id: 15,
-      name: 'Portfolio Project',
-      image: '/portfolio.webp',
-      link: 'https://codebayu.com',
+      name: 'Kubernetes cluster development & admin',
+      src: 'images/kubernetes.png',
+      type: 'img',
     },
   ];
   return (
@@ -49,12 +35,12 @@ export const Portfolio = () => {
     >
       <SectionHeader
         icon={<IconBrandCodepen />}
-        label="Portfolio"
-        description={sectionDescription}
+        label={t('portfolio.title')}
+        description={t('portfolio.description')}
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {portfolios.map((portfolio) => (
-          <ProjectCard key={portfolio.id} {...portfolio} />
+          <ProjectCard key={portfolio.name} {...portfolio} />
         ))}
       </div>
     </motion.section>

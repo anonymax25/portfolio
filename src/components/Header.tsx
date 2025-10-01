@@ -11,11 +11,9 @@ export const Header = () => {
   const { t, i18n } = useTranslation();
   const [openDrawer, setOpenDrawer] = useState(false);
   const navLink: INavLink[] = [
-    { name: 'skills', path: '/skills' },
-    { name: 'experience', path: '/experience' },
-    { name: 'education', path: '/education' },
     { name: 'portfolio', path: '/portfolio' },
     { name: 'contact', path: '/contact' },
+    { name: 'skills', path: '/skills' },
   ];
   function toggleDrawer() {
     setOpenDrawer(!openDrawer);

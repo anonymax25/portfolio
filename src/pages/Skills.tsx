@@ -15,6 +15,7 @@ import {
   IconLink,
   IconLock,
   IconSunglasses,
+  IconBrandCss3,
 } from '@tabler/icons-react';
 import { SectionMotion } from '../common/motion/Section';
 import { SectionHeader } from '../components/SectionHeader';
@@ -25,9 +26,10 @@ export const Skills = () => {
   const { section } = SectionMotion;
   const { t } = useTranslation();
   const skills = [
-    { type: 'frontend', label: 'React Js', icon: <IconBrandReact /> },
-    { type: 'frontend', label: 'Vue Js', icon: <IconBrandVue /> },
+    { type: 'frontend', label: 'React Ts', icon: <IconBrandReact /> },
+    { type: 'frontend', label: 'Vue Ts', icon: <IconBrandVue /> },
     { type: 'frontend', label: 'Angular', icon: <IconBrandAngular /> },
+    { type: 'frontend', label: 'Design', icon: <IconBrandCss3 /> },
     { type: 'backend', label: 'Node.Js', icon: <IconBrandTypescript /> },
     { type: 'backend', label: '.Net', icon: <IconBrandCSharp /> },
     { type: 'backend', label: 'python', icon: <IconBrandPython /> },
@@ -37,7 +39,7 @@ export const Skills = () => {
     { type: 'infrastructure', label: 'Ansible', icon: <IconBrandAnsible /> },
     { type: 'infrastructure', label: 'Hosting', icon: <IconDevicesPc /> },
     { type: 'infrastructure', label: 'Database Admin', icon: <IconDatabase /> },
-    { type: 'infrastructure', label: 'Domaine management', icon: <IconLink /> },
+    { type: 'infrastructure', label: 'Domaines', icon: <IconLink /> },
     { type: 'infrastructure', label: 'Certificates', icon: <IconLock /> },
   ];
   return (
@@ -52,24 +54,24 @@ export const Skills = () => {
         label={t('skills.title')}
         description={t('skills.description')}
       />
+      <h1 className="text-2xl font-bold">{t('skills.frontend')}</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
-        Frontend
         {skills
           .filter((s) => s.type === 'frontend')
           .map((skill) => (
             <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
           ))}
       </div>
+      <h1 className="text-2xl font-bold">{t('skills.backend')}</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
-        Backend
         {skills
           .filter((s) => s.type === 'backend')
           .map((skill) => (
             <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
           ))}
       </div>
+      <h1 className="text-2xl font-bold">{t('skills.infra')}</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
-        Infrastructure
         {skills
           .filter((s) => s.type === 'infrastructure')
           .map((skill) => (

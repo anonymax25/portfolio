@@ -6,7 +6,7 @@
   "home": {
     "hi": "Bonjour, je suis",
     "engineer": "Developpeur Freelance",
-    "intro": "Développeur freelance passionné depuis 2024, j'accompagne mes clients dans la création de solutions modernes et efficaces, adaptées à leurs besoins.",
+    "intro": "Développeur freelance passionné, j'accompagne mes clients dans la création de solutions modernes et efficaces, adaptées à leurs besoins.",
     "objectives": "Mes objectif : transparence, communication et performance",
     "resume": "Télécharger mon CV"
   },
@@ -19,12 +19,19 @@
   },
   "skills": {
     "title": "Compétences",
-    "description": "Une collection de compétences techniques qui me permettront de vous aider à concrétiser vos idées."
+    "description": "Une collection de compétences techniques et d'outils qui me permettront de vous aider à concrétiser vos idées.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "infra": "Infrastructure"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Un portfolio de projets passés."
   },
   "contact": {
     "title": "Contact",
     "contact": "Contactez moi à tout moment",
-    "send": "Envoyez un message",
+    "send": "Me contacter",
     "see": "Voir le profile"
   }
 }

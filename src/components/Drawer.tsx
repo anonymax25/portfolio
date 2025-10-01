@@ -24,7 +24,7 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
       initial={container.initial}
       animate={container.animated}
       transition={container.transition}
-      className="bg-black p-4 fixed top-0 left-0 right-0 border-b border-teal-500 rounded-b-xl"
+      className="bg-black p-4 fixed top-0 left-0 right-0 border-b border-teal-500"
     >
       <div className="flex justify-between font-bold text-lg mb-4 border-b border-white py-2 w-full">
         <Link to="/" className="text-white hover:text-teal-500">
@@ -46,7 +46,7 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
             onClick={onClick}
             className="text-white hover:text-teal-500"
           >
-            {link.name}
+            {t(`header.${link.name}`)}
           </Link>
         ))}
       </div>

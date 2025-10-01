@@ -1,16 +1,14 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-interface ProjectCardProps {
-  id: number;
-  image: string;
+export interface ProjectCardProps {
   name: string;
-  link: string;
+  src: string;
+  type: 'url' | 'img';
 }
 
-export const ProjectCard = (props: ProjectCardProps) => {
-  const { image, name, link } = props;
+export const ProjectCard = ({ name, src, type }: ProjectCardProps) => {
   return (
-    <Link to={link} target="_blank">
+    <Link to={src} target="_blank">
       <motion.div
         initial={{
           scale: 1,
@@ -25,9 +23,25 @@ export const ProjectCard = (props: ProjectCardProps) => {
         }}
         className="flex flex-col items-center max-w-full md:max-w-lg overflow-hidden rounded-xl bg-gray-900"
       >
-        <img src={image} alt={name} className="object-cover w-full h-60" />
+        {type === 'url' ? (
+          <iframe
+            title={name}
+            className="object-cover w-full h-60"
+            src={src}
+            width="800"
+            height="800"
+          />
+        ) : (
+          <img src={`${src}`} alt={name} />
+        )}
+
         <div className="flex flex-col justify-start p-4 text-gray-400 text-sm">
-          <h2 className="text-lg font-bold text-white">{name}</h2>
+          <h2 className="text-lg font-bold text-white">
+            {type === 'url' && (
+              <img src={`${src}/favicon.ico`} alt={name} height={'16px'} width={'16px'} />
+            )}
+            <span>{name}</span>
+          </h2>
           <p className="text-gray-400 text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore eius provident?
             Inventore, quas repudiandae.

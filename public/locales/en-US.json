@@ -6,7 +6,7 @@
   "home": {
     "hi": "Hi there, i'm",
     "engineer": "Freelance Software Engineer",
-    "intro": "Passionate freelance Software Engineer since 2024, I support my clients in creating modern and efficient solutions tailored to their needs. My goal: to turn your ideas into concrete and high-performing projects.",
+    "intro": "Passionate freelance Software Engineer, I support my clients in creating modern and efficient solutions tailored to their needs. My goal: to turn your ideas into concrete and high-performing projects.",
     "objectives": "My objectives : transparancy, communication and performance",
     "resume": "Download Resume"
   },
@@ -19,12 +19,19 @@
   },
   "skills": {
     "title": "Skills",
-    "description": "A collection of technical skills that will allow me to help you bring your ideas to life."
+    "description": "A collection of technical skills that will allow me to help you bring your ideas to life.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "infra": "Infrastructure"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "A portfolio of past and current projects."
   },
   "contact": {
     "title": "Contact",
     "contact": "Feel free to contact me",
-    "send": "Send a message",
+    "send": "Contact me",
     "see": "See profile"
   }
 }
