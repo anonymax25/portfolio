@@ -13,7 +13,21 @@ export const Home = () => {
     console.log(import.meta.env);
   }, []);
 
-  const { description, resume, wrapImg, image } = HomeMotion;
+  const { description, resume: resumeMotion, wrapImg, image } = HomeMotion;
+
+  const resume = () => (
+    <a href={`files/resume.pdf`} target="_blank" className="flex justify-center" rel="noreferrer">
+      <motion.div
+        initial={resumeMotion.initial}
+        animate={resumeMotion.animated}
+        transition={resumeMotion.transition}
+        className="rounded-3xl w-max border px-4 py-2 border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-black hover:border-accent-500"
+      >
+        {t('home.resume')}
+      </motion.div>
+    </a>
+  );
+
   return (
     <>
       <section className="flex flex-col lg:flex-row h-full p-6 items-center min-h-[70vh]">
@@ -31,8 +45,10 @@ export const Home = () => {
               {t('home.engineer')}
             </h2>
           </div>
-          <p className="text-center md:text-start text-xs md:text-base">{t('home.intro')}</p>
-          <p className="text-center md:text-start text-xs md:text-base">{t('home.objectives')}</p>
+          <p className="text-center md:text-start text-xs m-2 md:text-base">{t('home.intro')}</p>
+          <p className="text-center md:text-start text-xs m-2 md:text-base">
+            {t('home.objectives')}
+          </p>
           <div className="flex">
             <ContactCard
               name="Email"
@@ -42,12 +58,12 @@ export const Home = () => {
             />
           </div>
         </motion.div>
-        <br />
+
         <motion.div
           initial={wrapImg.initial}
           animate={wrapImg.animated}
           transition={wrapImg.transition}
-          className="flex flex-1 items-center justify-center bg-gradient-to-bl from-accent to-black overflow-hidden"
+          className="flex flex-1 items-center justify-center bg-gradient-to-bl from-accent to-black m-4 overflow-hidden"
         >
           <motion.img
             initial={image.initial}
@@ -60,27 +76,14 @@ export const Home = () => {
           />
         </motion.div>
       </section>
+      <div className="divider" />
       <section>
-        <a
-          href={`files/resume.pdf`}
-          target="_blank"
-          className="flex justify-center"
-          rel="noreferrer"
-        >
-          <motion.div
-            initial={resume.initial}
-            animate={resume.animated}
-            transition={resume.transition}
-            className="rounded-3xl w-max border px-4 py-2 border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-black hover:border-accent-500"
-          >
-            {t('home.resume')}
-          </motion.div>
-        </a>
-        <br />
+        {resume()}
+        <div className="divider" />
         <Portfolio />
-        <br />
+        <div className="divider" />
         <Contact />
-        <br />
+        <div className="divider" />
         <Skills />
       </section>
     </>
