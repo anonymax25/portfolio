@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { Drawer } from './Drawer';
 import { INavLink } from '../types/common';
 import { useTranslation } from '../i18n';
+import { LangSwitcher } from './LangSwitcher';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 export const Header = () => {
   const { t } = useTranslation();
@@ -29,24 +31,26 @@ export const Header = () => {
           {t('common.name')}
         </motion.div>
       </Link>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="hidden lg:flex space-x-10"
-      >
-        {navLink.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className="text-white font-bold hover:text-accent-400"
-          >
-            {t(`header.${item.name}`)}
-          </Link>
-        ))}
-      </motion.nav>
-      <IconMenu2 onClick={toggleDrawer} className="cursor-pointer flex lg:hidden" />
-      {openDrawer && <Drawer onClick={toggleDrawer} links={navLink} />}
+      <div className="flex items-center gap-4">
+        <motion.nav
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="hidden lg:flex space-x-10"
+        >
+          {navLink.map((item) => (
+            <Link key={item.path} to={item.path} className="font-bold hover:text-accent-400">
+              {t(`header.${item.name}`)}
+            </Link>
+          ))}
+        </motion.nav>
+        <span className="hidden lg:block">
+          <ThemeSwitcher />
+          <LangSwitcher />
+        </span>
+        <IconMenu2 onClick={toggleDrawer} className="cursor-pointer flex lg:hidden" />
+        {openDrawer && <Drawer onClick={toggleDrawer} links={navLink} />}
+      </div>
     </motion.header>
   );
 };

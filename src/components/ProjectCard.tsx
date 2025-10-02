@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../i18n';
 export interface ProjectCardProps {
   name: string;
   src: string;
+  i18n: string;
   type: 'url' | 'img';
 }
 
-export const ProjectCard = ({ name, src, type }: ProjectCardProps) => {
+export const ProjectCard = ({ name, src, type, i18n }: ProjectCardProps) => {
+  const { t } = useTranslation();
   return (
     <Link to={src} target="_blank">
       <motion.div
@@ -42,10 +45,12 @@ export const ProjectCard = ({ name, src, type }: ProjectCardProps) => {
             )}
             <span>{name}</span>
           </h2>
-          <p className="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore eius provident?
-            Inventore, quas repudiandae.
-          </p>
+          <p className="text-sm">{t(`${i18n}.description`)}</p>
+          {type === 'url' && (
+            <a className="link" href={src}>
+              {src}
+            </a>
+          )}
         </div>
       </motion.div>
     </Link>

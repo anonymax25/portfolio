@@ -14,16 +14,19 @@ export const Portfolio = () => {
       name: 'Mizipet / Mizipet Pro',
       src: 'https://pro.mizipet.com',
       type: 'url',
+      i18n: 'portfolio.mizipet',
     },
     {
       name: 'Grafana Monitoring Stack',
       src: 'images/grafana.png',
       type: 'img',
+      i18n: 'portfolio.grafana',
     },
     {
       name: 'Kubernetes cluster development & admin',
       src: 'images/kubernetes.png',
       type: 'img',
+      i18n: 'portfolio.kubernetes',
     },
   ];
   return (

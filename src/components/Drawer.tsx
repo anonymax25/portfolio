@@ -28,12 +28,13 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
           {t('common.name')}
         </Link>
 
-        <span>
-          <ThemeSwitcher />
-          <LangSwitcher />
-        </span>
-
-        <IconX onClick={onClick} />
+        <div className="flex items-center gap-2">
+          <span>
+            <ThemeSwitcher />
+            <LangSwitcher />
+          </span>
+          <IconX onClick={onClick} />
+        </div>
       </div>
 
       <div className="flex flex-col p-4 space-y-2 text-center">

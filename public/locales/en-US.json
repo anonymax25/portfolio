@@ -26,7 +26,16 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "description": "A portfolio of past and current projects."
+    "description": "A portfolio of past and current projects.",
+    "mizipet": {
+      "description": "Mizipet, a Saas for professionals in the animal sector"
+    },
+    "grafana": {
+      "description": "Grafana Monitoring Stack with custom and pre built dashboards"
+    },
+    "kubernetes": {
+      "description": "Kubernetes deployment for your applications, on-premise or in the cloud"
+    }
   },
   "contact": {
     "title": "Contact",
