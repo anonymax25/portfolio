@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import tailwindcss from "@tailwindcss/vite";
+import daisyui from "daisyui";
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -35,6 +37,10 @@ export default {
     },
   },
   plugins: [
-    tailwindcss()
+    tailwindcss(),
+    daisyui()
   ],
+  daisyui: {
+    themes: ["light", "dark", "cupcake", "synthwave"],
+  },
 };

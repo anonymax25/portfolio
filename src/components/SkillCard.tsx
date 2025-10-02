@@ -5,8 +5,8 @@ interface SkillCardProps {
 
 export const SkillCard = ({ icon, label }: SkillCardProps) => {
   return (
-    <div className="flex flex-col cursor-pointer items-center justify-center space-y-2 border border-teal-500 w-max min-w-[150px] p-2 rounded-md hover:bg-teal-500">
-      {icon}
+    <div className="flex flex-col cursor-pointer items-center justify-center space-y-2 border border-base-100 p-2 rounded-md hover:bg-accent-500">
+      <div className="text-accent">{icon}</div>
       <span>{label}</span>
     </div>
   );

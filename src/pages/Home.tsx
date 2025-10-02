@@ -24,10 +24,10 @@ export const Home = () => {
           transition={description.transition}
         >
           <div className="flex flex-col justify-center gap-2 text-md lg:text-2xl font-medium font-sora">
-            <h1 className="text-white text-center font-extrabold text-4xl md:text-6xl">
+            <h1 className="text-accent text-center font-extrabold text-4xl md:text-6xl">
               {t('common.name')}
             </h1>
-            <h2 className="text-teal-500 text-center font-bold text-xl md:text-3xl">
+            <h2 className="text-accent text-center font-bold text-xl md:text-3xl">
               {t('home.engineer')}
             </h2>
           </div>
@@ -47,7 +47,7 @@ export const Home = () => {
           initial={wrapImg.initial}
           animate={wrapImg.animated}
           transition={wrapImg.transition}
-          className="flex flex-1 items-center justify-center bg-gradient-to-bl from-emerald-500 via-emerald-900 to-black overflow-hidden"
+          className="flex flex-1 items-center justify-center bg-gradient-to-bl from-accent to-black overflow-hidden"
         >
           <motion.img
             initial={image.initial}
@@ -71,7 +71,7 @@ export const Home = () => {
             initial={resume.initial}
             animate={resume.animated}
             transition={resume.transition}
-            className="rounded-3xl w-max border px-4 py-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-black hover:border-teal-500"
+            className="rounded-3xl w-max border px-4 py-2 border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-black hover:border-accent-500"
           >
             {t('home.resume')}
           </motion.div>

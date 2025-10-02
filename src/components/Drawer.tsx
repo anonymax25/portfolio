@@ -1,10 +1,11 @@
-import { IconX, IconLanguage } from '@tabler/icons-react';
+import { IconX } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { INavLink } from '../types/common';
 import { Link } from 'react-router-dom';
 import { DrawerMotion } from '../common/motion/Drawer';
 import { useTranslation } from '../i18n';
-import { DefaultSupportedLngs } from '../i18n/setup';
+import { ThemeSwitcher } from './ThemeSwitcher';
+import { LangSwitcher } from './LangSwitcher';
 
 interface DrawerProps {
   onClick(): void;
@@ -13,39 +14,31 @@ interface DrawerProps {
 
 export const Drawer = ({ onClick, links }: DrawerProps) => {
   const { container } = DrawerMotion;
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lng: DefaultSupportedLngs) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
 
   return (
     <motion.nav
       initial={container.initial}
       animate={container.animated}
       transition={container.transition}
-      className="bg-black p-4 fixed top-0 left-0 right-0 border-b border-teal-500"
+      className="bg-base-300 fixed top-0 left-0 right-0 border-b border-accent-500"
     >
-      <div className="flex justify-between font-bold text-lg mb-4 border-b border-white py-2 w-full">
-        <Link to="/" className="text-white hover:text-teal-500">
+      <div className="flex justify-between items-center font-bold text-lg p-4 border-b w-full">
+        <Link to="/" className="hover:text-accent-500">
           {t('common.name')}
         </Link>
-        <IconLanguage
-          onClick={() => {
-            changeLanguage(i18n.language === 'en-US' ? 'fr-FR' : 'en-US');
-            onClick();
-          }}
-        />
+
+        <span>
+          <ThemeSwitcher />
+          <LangSwitcher />
+        </span>
+
         <IconX onClick={onClick} />
       </div>
-      <div className="flex flex-col space-y-2 text-center">
+
+      <div className="flex flex-col p-4 space-y-2 text-center">
         {links.map((link) => (
-          <Link
-            to={link.path}
-            key={link.path}
-            onClick={onClick}
-            className="text-white hover:text-teal-500"
-          >
+          <Link to={link.path} key={link.path} onClick={onClick} className="hover:text-accent-500">
             {t(`header.${link.name}`)}
           </Link>
         ))}

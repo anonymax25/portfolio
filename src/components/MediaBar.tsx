@@ -32,7 +32,7 @@ export const MediaBar = () => {
       initial={container.initial}
       animate={container.animated}
       transition={container.transition}
-      className="hidden md:flex absolute z-10 flex-col w-10 p-2 bg-teal-500 items-center rounded-md bottom-0 md:bottom-auto md:top-80 space-y-4"
+      className="hidden md:flex absolute z-10 flex-col w-10 p-2 bg-accent-500 items-center rounded-md bottom-0 md:bottom-auto md:top-80 space-y-4"
     >
       {media.map((item) => (
         <Link

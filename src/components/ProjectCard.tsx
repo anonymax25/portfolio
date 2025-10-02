@@ -21,7 +21,7 @@ export const ProjectCard = ({ name, src, type }: ProjectCardProps) => {
         transition={{
           duration: 0.2,
         }}
-        className="flex flex-col items-center max-w-full md:max-w-lg overflow-hidden rounded-xl bg-gray-900"
+        className="card bg-base-200 card-border flex flex-col items-center max-w-full md:max-w-lg overflow-hidden rounded-xl"
       >
         {type === 'url' ? (
           <iframe
@@ -35,14 +35,14 @@ export const ProjectCard = ({ name, src, type }: ProjectCardProps) => {
           <img src={`${src}`} alt={name} />
         )}
 
-        <div className="flex flex-col justify-start p-4 text-gray-400 text-sm">
-          <h2 className="text-lg font-bold text-white">
+        <div className="flex flex-col justify-start p-4 text-sm">
+          <h2 className="text-lg font-bold">
             {type === 'url' && (
               <img src={`${src}/favicon.ico`} alt={name} height={'16px'} width={'16px'} />
             )}
             <span>{name}</span>
           </h2>
-          <p className="text-gray-400 text-sm">
+          <p className="text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore eius provident?
             Inventore, quas repudiandae.
           </p>

@@ -11,13 +11,22 @@ import { NotFound } from './pages/NotFound';
 import { init } from './i18n/setup';
 init();
 import './i18n';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    const theme =
+      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  }, []);
+
   return (
-    <main className="w-screen py-4 bg-gray-950 text-gray-50 min-h-screen">
+    <main className="w-screen min-h-screen">
       <Header />
       <MediaBar />
-      <section className="px-3 md:px-10 lg:px-20 pb-12 min-h-screen">
+      <section className="bg-base-100 px-3 md:px-10 lg:px-20 pb-12 min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/skills" element={<Skills />} />
