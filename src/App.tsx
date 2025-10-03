@@ -11,17 +11,8 @@ import { NotFound } from './pages/NotFound';
 import { init } from './i18n/setup';
 init();
 import './i18n';
-import { useEffect } from 'react';
 
 function App() {
-  useEffect(() => {
-    const theme =
-      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light';
-    document.documentElement.setAttribute('data-theme', theme);
-  }, []);
-
   return (
     <main className="w-screen min-h-screen">
       <Header />

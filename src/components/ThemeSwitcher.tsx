@@ -28,12 +28,21 @@ export const ThemeSwitcher = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    const theme = document.documentElement.getAttribute('data-theme');
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme =
+      window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    const theme = savedTheme || systemTheme;
     setIsDark(theme === 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
   }, []);
 
   const handleToggle = () => {
+    const newTheme = isDark ? 'light' : 'dark';
     setIsDark(!isDark);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
   };
 
   return (
