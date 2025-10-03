@@ -97,5 +97,10 @@
     "contact": "Contactez moi à tout moment",
     "send": "Me contacter",
     "see": "Voir le profile"
+  },
+  "notFound": {
+    "title": "404 Page introuvable",
+    "message": "La page que vous recherchez n'existe pas.",
+    "backToHome": "Retour à l'accueil"
   }
 }
