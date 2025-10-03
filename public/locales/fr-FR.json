@@ -8,7 +8,62 @@
     "engineer": "Developpeur Freelance",
     "intro": "Développeur passionné, solutions modernes et efficaces, adaptées à leurs besoins.",
     "objectives": "Mes objectif : communication et performance",
-    "resume": "Télécharger mon CV"
+    "resume": "Télécharger mon CV",
+    "cta": {
+      "getInTouch": "Me Contacter",
+      "viewResume": "Voir mon CV"
+    },
+    "sections": {
+      "coreTechnologies": {
+        "title": "Technologies Principales"
+      },
+      "whyWorkWithMe": {
+        "title": "Pourquoi Travailler Avec Moi",
+        "subtitle": "Excellence garantie grâce à une expertise éprouvée et un engagement total",
+        "metrics": {
+          "experience": {
+            "label": "6+ Ans",
+            "description": "d'Expérience Professionnelle"
+          },
+          "projects": {
+            "label": "3 Projets",
+            "description": "Livrés avec Succès"
+          },
+          "satisfaction": {
+            "label": "100%",
+            "description": "de Satisfaction Client"
+          }
+        }
+      },
+      "featuredProjects": {
+        "title": "Projets Mis en Avant"
+      },
+      "expertise": {
+        "title": "Domaines d'Expertise",
+        "subtitle": "Compétences spécialisées et axes de recherche",
+        "areas": {
+          "webDev": {
+            "title": "Développement Web",
+            "description": "Création d'applications web modernes, réactives et performantes utilisant les technologies de pointe."
+          },
+          "uiux": {
+            "title": "Design UI/UX",
+            "description": "Conception d'interfaces utilisateur intuitives et engageantes avec un focus sur l'accessibilité et l'expérience utilisateur."
+          },
+          "fullStack": {
+            "title": "Ingénierie Full Stack",
+            "description": "Développement de bout en bout, de la conception de la base de données à l'implémentation frontend et au déploiement."
+          }
+        }
+      }
+    },
+    "technologies": {
+      "react": "React",
+      "typescript": "TypeScript",
+      "angular": "Angular",
+      "dotnet": ".NET",
+      "devops": "DevOps"
+    }
   },
   "header": {
     "skills": "Competences",

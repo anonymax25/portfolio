@@ -44,10 +44,10 @@ export const Header = () => {
             </Link>
           ))}
         </motion.nav>
-        <span className="hidden lg:block">
+        <div className="hidden lg:flex flex-row gap-2">
           <ThemeSwitcher />
           <LangSwitcher />
-        </span>
+        </div>
         <IconMenu2 onClick={toggleDrawer} className="cursor-pointer flex lg:hidden" />
         {openDrawer && <Drawer onClick={toggleDrawer} links={navLink} />}
       </div>

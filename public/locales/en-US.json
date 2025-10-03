@@ -4,11 +4,66 @@
   },
   "copyright": "CopyRight © 2025 Maxime d'Harboullé All Rights Reserved",
   "home": {
-    "hi": "Hi there, i'm",
+    "hi": "Hi, I'm",
     "engineer": "Freelance Software Engineer",
     "intro": "Passionate Software Engineer,  modern and efficient solutions tailored to their needs. My goal: to turn your ideas into concrete and high-performing projects.",
     "objectives": "My objectives : communication and performance",
-    "resume": "Download Resume"
+    "resume": "Download Resume",
+    "cta": {
+      "getInTouch": "Get in Touch",
+      "viewResume": "View Resume"
+    },
+    "sections": {
+      "coreTechnologies": {
+        "title": "Core Technologies"
+      },
+      "whyWorkWithMe": {
+        "title": "Why Work With Me",
+        "subtitle": "Delivering excellence through proven expertise and dedication",
+        "metrics": {
+          "experience": {
+            "label": "7+ Years",
+            "description": "Professional Experience"
+          },
+          "projects": {
+            "label": "3 Projects",
+            "description": "Successfully Delivered"
+          },
+          "satisfaction": {
+            "label": "100%",
+            "description": "Client Satisfaction"
+          }
+        }
+      },
+      "featuredProjects": {
+        "title": "Featured Projects"
+      },
+      "expertise": {
+        "title": "Expertise Areas",
+        "subtitle": "Specialized skills and research focus",
+        "areas": {
+          "webDev": {
+            "title": "Web Development",
+            "description": "Building modern, responsive, and performant web applications using cutting-edge technologies."
+          },
+          "uiux": {
+            "title": "UI/UX Design",
+            "description": "Creating intuitive and engaging user interfaces with focus on accessibility and user experience."
+          },
+          "fullStack": {
+            "title": "Full Stack Engineering",
+            "description": "End-to-end development from database design to frontend implementation and deployment."
+          }
+        }
+      }
+    },
+    "technologies": {
+      "react": "React",
+      "typescript": "TypeScript",
+      "angular": "Angular",
+      "dotnet": ".NET",
+      "devops": "DevOps"
+    }
   },
   "header": {
     "skills": "Skills",

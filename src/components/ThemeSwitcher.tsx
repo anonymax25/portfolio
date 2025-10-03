@@ -37,7 +37,7 @@ export const ThemeSwitcher = () => {
   };
 
   return (
-    <span className="cursor-pointer">
+    <label className="cursor-pointer" aria-label="Toggle theme">
       <input
         type="checkbox"
         className="theme-controller hidden"
@@ -80,6 +80,6 @@ export const ThemeSwitcher = () => {
           )}
         </AnimatePresence>
       </div>
-    </span>
+    </label>
   );
 };
