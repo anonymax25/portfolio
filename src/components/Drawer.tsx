@@ -29,7 +29,7 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
         </Link>
 
         <div className="flex items-center gap-2">
-          <span>
+          <span className="flex items-center gap-2">
             <ThemeSwitcher />
             <LangSwitcher />
           </span>
