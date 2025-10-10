@@ -5,7 +5,7 @@
   "copyright": "Droits d'auteur © 2025 Maxime d'Harboullé. Tous droits réservés",
   "home": {
     "hi": "Bonjour, je suis",
-    "engineer": "Developpeur Freelance",
+    "engineer": "Developpeur",
     "intro": "Développeur passionné, solutions modernes et efficaces, adaptées à leurs besoins.",
     "objectives": "Mes objectif : communication et performance",
     "resume": "Télécharger mon CV",
@@ -31,7 +31,7 @@
           },
           "satisfaction": {
             "label": "100%",
-            "description": "de Satisfaction Client"
+            "description": ""
           }
         }
       },

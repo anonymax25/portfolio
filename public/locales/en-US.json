@@ -5,7 +5,7 @@
   "copyright": "CopyRight © 2025 Maxime d'Harboullé All Rights Reserved",
   "home": {
     "hi": "Hi, I'm",
-    "engineer": "Freelance Software Engineer",
+    "engineer": "Software Engineer",
     "intro": "Passionate Software Engineer,  modern and efficient solutions tailored to their needs. My goal: to turn your ideas into concrete and high-performing projects.",
     "objectives": "My objectives : communication and performance",
     "resume": "Download Resume",
@@ -31,7 +31,7 @@
           },
           "satisfaction": {
             "label": "100%",
-            "description": "Client Satisfaction"
+            "description": ""
           }
         }
       },
