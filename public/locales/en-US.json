@@ -22,12 +22,12 @@
         "subtitle": "Delivering excellence through proven expertise and dedication",
         "metrics": {
           "experience": {
-            "label": "7+ Years",
+            "label": "6+ Years",
             "description": "Professional Experience"
           },
           "projects": {
-            "label": "3 Projects",
-            "description": "Successfully Delivered"
+            "label": "3 Projects..",
+            "description": ""
           },
           "satisfaction": {
             "label": "100%",
@@ -42,9 +42,9 @@
         "title": "Expertise Areas",
         "subtitle": "Specialized skills and research focus",
         "areas": {
-          "webDev": {
-            "title": "Web Development",
-            "description": "Building modern, responsive, and performant web applications using cutting-edge technologies."
+          "infra": {
+            "title": "Infrastructure",
+            "description": "DevOps, Kubernetes, GitOps, Hosting, Monitoring, Testing, Infra as Code."
           },
           "uiux": {
             "title": "UI/UX Design",

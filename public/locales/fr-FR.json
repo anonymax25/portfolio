@@ -26,8 +26,8 @@
             "description": "d'Expérience Professionnelle"
           },
           "projects": {
-            "label": "3 Projets",
-            "description": "Livrés avec Succès"
+            "label": "3 Projets...",
+            "description": ""
           },
           "satisfaction": {
             "label": "100%",
@@ -42,9 +42,9 @@
         "title": "Domaines d'Expertise",
         "subtitle": "Compétences spécialisées et axes de recherche",
         "areas": {
-          "webDev": {
-            "title": "Développement Web",
-            "description": "Création d'applications web modernes, réactives et performantes utilisant les technologies de pointe."
+          "infra": {
+            "title": "Infrastructure",
+            "description": "DevOps, Kubernetes, GitOps, Hosting, Monitoring, Testing, Infra as Code."
           },
           "uiux": {
             "title": "Design UI/UX",

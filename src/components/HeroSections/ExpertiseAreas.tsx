@@ -6,19 +6,19 @@ export const ExpertiseAreas = () => {
 
   const expertise = [
     {
-      title: t('home.sections.expertise.areas.webDev.title'),
-      description: t('home.sections.expertise.areas.webDev.description'),
+      title: t('home.sections.expertise.areas.fullStack.title'),
+      description: t('home.sections.expertise.areas.fullStack.description'),
+      icon: '⚙️',
+    },
+    {
+      title: t('home.sections.expertise.areas.infra.title'),
+      description: t('home.sections.expertise.areas.infra.description'),
       icon: '🌐',
     },
     {
       title: t('home.sections.expertise.areas.uiux.title'),
       description: t('home.sections.expertise.areas.uiux.description'),
       icon: '🎨',
-    },
-    {
-      title: t('home.sections.expertise.areas.fullStack.title'),
-      description: t('home.sections.expertise.areas.fullStack.description'),
-      icon: '⚙️',
     },
   ];
 
