@@ -26,7 +26,7 @@
             "description": "d'Expérience Professionnelle"
           },
           "projects": {
-            "label": "3 Projets...",
+            "label": "3 Projets",
             "description": ""
           },
           "satisfaction": {
@@ -58,11 +58,13 @@
       }
     },
     "technologies": {
-      "react": "React",
       "typescript": "TypeScript",
-      "angular": "Angular",
       "dotnet": ".NET",
-      "devops": "DevOps"
+      "devops": "DevOps",
+      "kubernetes": "Kubernetes",
+      "react": "React",
+      "angular": "Angular",
+      "etc": "..."
     }
   },
   "header": {

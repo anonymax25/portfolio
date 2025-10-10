@@ -62,7 +62,9 @@
       "typescript": "TypeScript",
       "angular": "Angular",
       "dotnet": ".NET",
-      "devops": "DevOps"
+      "devops": "DevOps",
+      "kubernetes": "Kubernetes",
+      "etc": "..."
     }
   },
   "header": {

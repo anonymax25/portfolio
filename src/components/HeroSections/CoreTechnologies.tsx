@@ -5,11 +5,13 @@ export const CoreTechnologies = () => {
   const { t } = useTranslation();
 
   const technologies = [
-    { name: t('home.technologies.react'), icon: '⚛️' },
     { name: t('home.technologies.typescript'), icon: '📘' },
-    { name: t('home.technologies.angular'), icon: '🅰️' },
     { name: t('home.technologies.dotnet'), icon: '🟣' },
     { name: t('home.technologies.devops'), icon: '⚙️' },
+    { name: t('home.technologies.kubernetes'), icon: '☸️' },
+    { name: t('home.technologies.react'), icon: '⚛️' },
+    { name: t('home.technologies.angular'), icon: '🅰️' },
+    { name: t('home.technologies.etc') },
   ];
 
   return (
@@ -26,7 +28,7 @@ export const CoreTechnologies = () => {
             transition={{ delay: index * 0.1 }}
             className="px-6 py-4 bg-base-200 rounded-lg flex items-center gap-3 hover:bg-base-300 transition-colors"
           >
-            <span className="text-2xl">{tech.icon}</span>
+            {tech.icon && <span className="text-2xl">{tech.icon}</span>}
             <span className="font-semibold text-lg">{tech.name}</span>
           </motion.div>
         ))}
