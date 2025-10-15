@@ -13,22 +13,16 @@ export const ContactCard = (props: ContactCardProps) => {
   const { image, name, description, link } = props;
   const { t } = useTranslation();
   return (
-    <motion.div className="bg-base-200 card-border border-accent flex items-center space-x-4 w-full md:w-max min-w-[300px] p-4 rounded-xl">
-      {image && <div className="w-20 h-20">{image}</div>}
-      <div className="flex flex-col space-y-2 items-start text-sm">
-        <div>
-          <h2 className="text-lg font-bold">{name}</h2>
-          <span>{description}</span>
-        </div>
-        <button className="btn btn-accent">
-          <Link
-            to={link}
-            target="_blank"
-            className="hover:text-white hover:bg-accent-600 rounded-md p-1"
-          >
+    <motion.div className="card card-side bg-base-200 border border-accent w-full md:w-max min-w-[300px]">
+      <figure className="pl-4">{image && <div className="w-20 h-20">{image}</div>}</figure>
+      <div className="card-body">
+        <h2 className="card-title">{name}</h2>
+        <p className="text-sm">{description}</p>
+        <div className="card-actions">
+          <Link to={link} target="_blank" className="btn btn-accent btn-sm">
             {t('contact.send')}
           </Link>
-        </button>
+        </div>
       </div>
     </motion.div>
   );

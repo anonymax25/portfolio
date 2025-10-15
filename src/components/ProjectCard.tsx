@@ -24,30 +24,26 @@ export const ProjectCard = ({ name, src, type, i18n }: ProjectCardProps) => {
         transition={{
           duration: 0.2,
         }}
-        className="card bg-base-200 card-border flex flex-col items-center max-w-full md:max-w-lg overflow-hidden rounded-xl"
+        className="card bg-base-200 shadow-xl max-w-full md:max-w-lg overflow-hidden"
       >
-        {type === 'url' ? (
-          <iframe
-            title={name}
-            className="object-cover w-full h-60"
-            src={src}
-            width="800"
-            height="800"
-          />
-        ) : (
-          <img src={`${src}`} alt={name} />
-        )}
+        <figure>
+          {type === 'url' ? (
+            <iframe title={name} className="w-full h-60" src={src} width="800" height="800" />
+          ) : (
+            <img src={`${src}`} alt={name} className="w-full" />
+          )}
+        </figure>
 
-        <div className="flex flex-col justify-start p-4 text-sm">
-          <h2 className="text-lg font-bold">
+        <div className="card-body">
+          <h2 className="card-title">
             {type === 'url' && (
               <img src={`${src}/favicon.ico`} alt={name} height={'16px'} width={'16px'} />
             )}
             <span>{name}</span>
           </h2>
-          <p className="text-sm">{t(`${i18n}.description`)}</p>
+          <p>{t(`${i18n}.description`)}</p>
           {type === 'url' && (
-            <a className="link" href={src}>
+            <a className="link link-primary" href={src}>
               {src}
             </a>
           )}

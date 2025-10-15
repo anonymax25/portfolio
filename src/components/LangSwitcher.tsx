@@ -12,7 +12,7 @@ export const LangSwitcher = () => {
     <select
       value={i18n.language}
       onChange={(e) => changeLanguage(e.target.value as DefaultSupportedLngs)}
-      className="px-3 py-2 bg-base-300 rounded-box border border-base-content/10 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer"
+      className="select select-bordered select-sm bg-base-300"
     >
       <option value="en-US">English</option>
       <option value="fr-FR">Français</option>

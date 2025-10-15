@@ -20,26 +20,28 @@ export const Header = () => {
     setOpenDrawer(!openDrawer);
   }
   return (
-    <motion.header className="bg-base-300 w-full sticky md:px-20 top-0 z-20 mb-4 flex items-center justify-between p-4">
-      <Link to="/">
-        <motion.div
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="flex items-center space-x-2 font-bold text-md md:text-3xl text-accent-400"
-        >
-          {t('common.name')}
-        </motion.div>
-      </Link>
-      <div className="flex items-center gap-4">
+    <motion.header className="navbar bg-base-300 w-full sticky top-0 z-20 mb-4 md:px-20">
+      <div className="navbar-start">
+        <Link to="/">
+          <motion.div
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="btn btn-ghost normal-case text-md md:text-3xl text-accent"
+          >
+            {t('common.name')}
+          </motion.div>
+        </Link>
+      </div>
+      <div className="navbar-end gap-4">
         <motion.nav
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.1 }}
-          className="hidden lg:flex space-x-10"
+          className="hidden lg:flex menu menu-horizontal px-1 gap-2"
         >
           {navLink.map((item) => (
-            <Link key={item.path} to={item.path} className="font-bold hover:text-accent-400">
+            <Link key={item.path} to={item.path} className="btn btn-ghost">
               {t(`header.${item.name}`)}
             </Link>
           ))}
@@ -48,7 +50,9 @@ export const Header = () => {
           <ThemeSwitcher />
           <LangSwitcher />
         </div>
-        <IconMenu2 onClick={toggleDrawer} className="cursor-pointer flex lg:hidden" />
+        <button onClick={toggleDrawer} className="btn btn-ghost btn-circle lg:hidden">
+          <IconMenu2 />
+        </button>
         {openDrawer && <Drawer onClick={toggleDrawer} links={navLink} />}
       </div>
     </motion.header>

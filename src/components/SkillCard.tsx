@@ -5,9 +5,11 @@ interface SkillCardProps {
 
 export const SkillCard = ({ icon, label }: SkillCardProps) => {
   return (
-    <div className="flex flex-col cursor-pointer items-center justify-center space-y-2 border border-base-100 p-2 rounded-md hover:bg-accent-500">
-      <div className="text-accent">{icon}</div>
-      <span>{label}</span>
+    <div className="card card-compact bg-base-200 border border-base-100 cursor-pointer hover:bg-accent hover:text-accent-content transition-colors">
+      <div className="card-body items-center justify-center">
+        <div className="text-4xl">{icon}</div>
+        <span className="card-title text-sm">{label}</span>
+      </div>
     </div>
   );
 };

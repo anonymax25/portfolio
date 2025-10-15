@@ -34,20 +34,20 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
       initial={container.initial}
       animate={container.animated}
       transition={container.transition}
-      className="bg-base-300 fixed top-0 left-0 right-0 border-b border-accent-500 z-50"
+      className="bg-base-300 fixed top-0 left-0 right-0 border-b border-accent z-50"
       role="navigation"
       aria-label="Mobile navigation menu"
     >
-      <div className="flex justify-between items-center font-bold text-lg p-4 border-b w-full">
-        <Link to="/" className="hover:text-accent-500">
-          {t('common.name')}
-        </Link>
+      <div className="navbar bg-base-300 border-b">
+        <div className="navbar-start">
+          <Link to="/" className="btn btn-ghost normal-case text-lg text-accent">
+            {t('common.name')}
+          </Link>
+        </div>
 
-        <div className="flex items-center gap-2">
-          <span className="flex items-center gap-2">
-            <ThemeSwitcher />
-            <LangSwitcher />
-          </span>
+        <div className="navbar-end gap-2">
+          <ThemeSwitcher />
+          <LangSwitcher />
           <button
             onClick={onClick}
             className="btn btn-ghost btn-sm btn-circle"
@@ -58,9 +58,9 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
         </div>
       </div>
 
-      <div className="flex flex-col p-4 space-y-2 text-center">
+      <div className="menu p-4">
         {links.map((link) => (
-          <Link to={link.path} key={link.path} onClick={onClick} className="hover:text-accent-500">
+          <Link to={link.path} key={link.path} onClick={onClick} className="btn btn-ghost w-full">
             {t(`header.${link.name}`)}
           </Link>
         ))}

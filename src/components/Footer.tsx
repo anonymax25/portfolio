@@ -3,8 +3,10 @@ import { useTranslation } from '../i18n';
 export const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="text-accent-500 text-center p-4 border-t border-accent-500 w-screen flex items-center justify-center">
-      <p>{t('copyright')}</p>
+    <footer className="footer footer-center p-4 border-t border-accent text-accent w-screen">
+      <aside>
+        <p>{t('copyright')}</p>
+      </aside>
     </footer>
   );
 };
