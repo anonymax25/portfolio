@@ -3,7 +3,6 @@ import { lazy, Suspense } from 'react';
 import { Header } from './components/Header';
 import { MediaBar } from './components/MediaBar';
 import { Footer } from './components/Footer';
-
 import { init } from './i18n/setup';
 init();
 import './i18n';
