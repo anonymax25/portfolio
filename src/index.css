@@ -22,3 +22,16 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+@keyframes ripple-expand {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 200vmax;
+    height: 200vmax;
+    opacity: 0;
+  }
+}

@@ -40,9 +40,44 @@ export const ThemeSwitcher = () => {
 
   const handleToggle = () => {
     const newTheme = isDark ? 'light' : 'dark';
+
+    // Add transition class before theme change
+    document.documentElement.style.setProperty(
+      'transition',
+      'background-color 0.5s ease, color 0.5s ease',
+    );
+
     setIsDark(!isDark);
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+
+    // Create a ripple effect
+    const ripple = document.createElement('div');
+    ripple.className = 'theme-transition-ripple';
+    ripple.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: ${isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'};
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 99999;
+      animation: ripple-expand 0.8s ease-out forwards;
+    `;
+
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 800);
+
+    // Remove transition after theme change completes
+    setTimeout(() => {
+      document.documentElement.style.removeProperty('transition');
+    }, 500);
   };
 
   return (

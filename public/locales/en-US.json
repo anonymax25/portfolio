@@ -6,6 +6,11 @@
   "home": {
     "hi": "Hi, I'm",
     "engineer": "Software Engineer",
+    "titles": {
+      "fullStack": "Full Stack Developer",
+      "reactSpecialist": "React Specialist",
+      "typescriptExpert": "TypeScript Expert"
+    },
     "intro": "Passionate Software Engineer,  modern and efficient solutions tailored to their needs. My goal: to turn your ideas into concrete and high-performing projects.",
     "objectives": "My objectives : communication and performance",
     "resume": "Download Resume",
@@ -104,5 +109,41 @@
     "title": "404 Not Found",
     "message": "The page you are looking for does not exist.",
     "backToHome": "Back to Homepage"
+  },
+  "commandPalette": {
+    "placeholder": "Type a command or search...",
+    "noCommands": "No commands found",
+    "commands": {
+      "home": {
+        "label": "Go to Home",
+        "keywords": "home main index"
+      },
+      "skills": {
+        "label": "Go to Skills",
+        "keywords": "skills abilities expertise"
+      },
+      "portfolio": {
+        "label": "Go to Portfolio",
+        "keywords": "portfolio projects work"
+      },
+      "contact": {
+        "label": "Go to Contact",
+        "keywords": "contact email reach"
+      },
+      "resume": {
+        "label": "View Resume",
+        "keywords": "resume cv pdf"
+      },
+      "theme": {
+        "label": "Toggle Theme",
+        "keywords": "theme dark light mode"
+      }
+    },
+    "hints": {
+      "navigate": "Navigate",
+      "select": "Select",
+      "close": "Close",
+      "open": "⌘K to open"
+    }
   }
 }

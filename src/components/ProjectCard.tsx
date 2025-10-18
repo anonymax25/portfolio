@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../i18n';
+import { useTilt } from '../hooks/useTilt';
+
 export interface ProjectCardProps {
   name: string;
   src: string;
@@ -10,14 +12,17 @@ export interface ProjectCardProps {
 
 export const ProjectCard = ({ name, src, type, i18n }: ProjectCardProps) => {
   const { t } = useTranslation();
+  const { ref, style } = useTilt({ maxTilt: 10, scale: 1.02 });
+
   return (
     <Link to={src} target="_blank">
       <motion.div
+        ref={ref}
+        style={style}
         initial={{
           scale: 1,
         }}
         whileHover={{
-          scale: 1.02,
           boxShadow:
             'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset',
         }}

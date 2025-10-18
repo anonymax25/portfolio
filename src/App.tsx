@@ -3,6 +3,10 @@ import { lazy, Suspense } from 'react';
 import { Header } from './components/Header';
 import { MediaBar } from './components/MediaBar';
 import { Footer } from './components/Footer';
+import { CommandPalette } from './components/CommandPalette';
+import { ScrollProgress } from './components/ScrollProgress';
+import { KeyboardShortcuts } from './components/KeyboardShortcuts';
+import { useKeyboardNav } from './hooks/useKeyboardNav';
 import { init } from './i18n/setup';
 init();
 import './i18n';
@@ -22,11 +26,17 @@ const PageLoader = () => (
 );
 
 function App() {
+  // Enable keyboard navigation
+  useKeyboardNav();
+
   return (
     <main className="w-screen min-h-screen">
+      <CommandPalette />
+      <ScrollProgress />
+      <KeyboardShortcuts />
       <Header />
       <MediaBar />
-      <section className="bg-base-100 px-3 md:px-10 lg:px-20 pb-12 min-h-screen">
+      <section className="bg-base-100 px-3 md:px-10 lg:px-20 pb-12 min-h-screen relative z-10">
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />

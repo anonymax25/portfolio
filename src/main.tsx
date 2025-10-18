@@ -5,9 +5,13 @@ import App from './App.tsx';
 import './index.css';
 import { HashRouter } from 'react-router-dom';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { registerServiceWorker } from './utils/registerServiceWorker';
 
 const MEASUREMENT_ID = 'G-EEK5P7GYD4';
 ReactGA4.initialize(MEASUREMENT_ID);
+
+// Register service worker for PWA support
+registerServiceWorker();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

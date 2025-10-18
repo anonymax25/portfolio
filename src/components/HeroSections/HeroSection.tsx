@@ -1,10 +1,23 @@
 import { motion } from 'framer-motion';
 import { HomeMotion } from '../../common/motion/Home';
 import { useTranslation } from '../../i18n';
+import { useTypewriter } from '../../hooks/useTypewriter';
 
 export const HeroSection = () => {
   const { t } = useTranslation();
   const { description, wrapImg, image } = HomeMotion;
+
+  const typedText = useTypewriter({
+    words: [
+      t('home.engineer'),
+      t('home.titles.fullStack'),
+      t('home.titles.reactSpecialist'),
+      t('home.titles.typescriptExpert'),
+    ],
+    typeSpeed: 80,
+    deleteSpeed: 50,
+    delayBetweenWords: 2500,
+  });
 
   return (
     <section className="flex flex-col lg:flex-row h-full p-6 items-center min-h-[70vh] gap-8">
@@ -18,8 +31,9 @@ export const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold text-center lg:text-left">
             {t('home.hi')} <span className="text-accent">{t('common.name')}</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-bold text-center lg:text-left opacity-80">
-            {t('home.engineer')}
+          <h2 className="text-2xl md:text-3xl font-bold text-center lg:text-left opacity-80 min-h-[2.5rem] flex items-center justify-center lg:justify-start">
+            <span>{typedText}</span>
+            <span className="animate-pulse text-accent ml-1">|</span>
           </h2>
         </div>
 
@@ -52,14 +66,18 @@ export const HeroSection = () => {
         transition={wrapImg.transition}
         className="flex flex-1 items-center justify-center max-w-md lg:max-w-lg"
       >
-        <motion.img
+        <motion.div
           initial={image.initial}
           animate={image.animated}
           transition={image.transition}
-          src="images/me.jpeg"
-          alt="profile"
-          className="rounded-2xl w-full h-auto shadow-2xl"
-        />
+          className="w-full"
+        >
+          <img
+            src="images/me.jpeg"
+            alt="profile"
+            className="rounded-2xl w-full h-auto shadow-2xl"
+          />
+        </motion.div>
       </motion.div>
     </section>
   );

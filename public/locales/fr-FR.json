@@ -4,8 +4,13 @@
   },
   "copyright": "Droits d'auteur © 2025 Maxime d'Harboullé. Tous droits réservés",
   "home": {
-    "hi": "Bonjour, je suis",
+    "hi": "Salut, je suis",
     "engineer": "Developpeur",
+    "titles": {
+      "fullStack": "Développeur Full Stack",
+      "reactSpecialist": "Spécialiste React",
+      "typescriptExpert": "Expert TypeScript"
+    },
     "intro": "Développeur passionné, solutions modernes et efficaces, adaptées à leurs besoins.",
     "objectives": "Mes objectif : communication et performance",
     "resume": "Télécharger mon CV",
@@ -104,5 +109,41 @@
     "title": "404 Page introuvable",
     "message": "La page que vous recherchez n'existe pas.",
     "backToHome": "Retour à l'accueil"
+  },
+  "commandPalette": {
+    "placeholder": "Tapez une commande ou recherchez...",
+    "noCommands": "Aucune commande trouvée",
+    "commands": {
+      "home": {
+        "label": "Aller à l'accueil",
+        "keywords": "accueil maison principal index"
+      },
+      "skills": {
+        "label": "Aller aux compétences",
+        "keywords": "compétences capacités expertise"
+      },
+      "portfolio": {
+        "label": "Aller au portfolio",
+        "keywords": "portfolio projets travail"
+      },
+      "contact": {
+        "label": "Aller au contact",
+        "keywords": "contact email contacter"
+      },
+      "resume": {
+        "label": "Voir le CV",
+        "keywords": "cv resume pdf"
+      },
+      "theme": {
+        "label": "Changer de thème",
+        "keywords": "thème sombre clair mode"
+      }
+    },
+    "hints": {
+      "navigate": "Naviguer",
+      "select": "Sélectionner",
+      "close": "Fermer",
+      "open": "⌘K pour ouvrir"
+    }
   }
 }
