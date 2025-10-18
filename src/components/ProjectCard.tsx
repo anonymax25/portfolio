@@ -47,11 +47,7 @@ export const ProjectCard = ({ name, src, type, i18n }: ProjectCardProps) => {
             <span>{name}</span>
           </h2>
           <p>{t(`${i18n}.description`)}</p>
-          {type === 'url' && (
-            <span className="link link-primary">
-              {src}
-            </span>
-          )}
+          {type === 'url' && <span className="link link-primary">{src}</span>}
         </div>
       </motion.div>
     </Link>
